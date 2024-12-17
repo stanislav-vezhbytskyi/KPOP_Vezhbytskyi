@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Image Viewer</h1>
+
+  <input
+    type="text"
+    [(ngModel)]="imagePath"
+    placeholder="Enter absolute path to the image"
+    class="input-field"
+  />
+
+  <button (click)="addImage()">Add Image</button>
+
+  <div class="image-list">
+    <div *ngFor="let img of imagePaths" class="image-container">
+      <img [src]="img" alt="Invalid path" class="image" />
+      <p>{{ img }}</p>
+    </div>
+  </div>
+</div>
